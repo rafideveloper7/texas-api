@@ -15,8 +15,8 @@ connectDB().then(async () => {
   try {
     const User = require('./models/User');
     const bcrypt = require('bcryptjs');
-    const adminEmail = 'admin@texasgrill.com';
-    const adminPassword = 'Admin@123';
+    const adminEmail = process.env.ADMIN_EMAIL;
+    const adminPassword = process.env.ADMIN_PASSWORD;
 
     const adminExists = await User.findOne({ email: adminEmail });
     if (!adminExists) {
