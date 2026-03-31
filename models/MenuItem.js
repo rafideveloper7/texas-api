@@ -27,8 +27,4 @@ const menuItemSchema = new Schema({
   recipeLink: String
 }, { timestamps: true });
 
-<<<<<<< HEAD
 module.exports = mongoose.model('MenuItem', menuItemSchema);
-=======
-module.exports = mongoose.model('MenuItem', menuItemSchema);
->>>>>>> c99b81f7d7106760fdecb4b8ecc28cd834687b97

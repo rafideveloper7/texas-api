@@ -34,8 +34,4 @@ const orderSchema = new Schema({
   estimatedTime: Number
 }, { timestamps: true });
 
-<<<<<<< HEAD
 module.exports = mongoose.model('Order', orderSchema);
-=======
-module.exports = mongoose.model('Order', orderSchema);
->>>>>>> c99b81f7d7106760fdecb4b8ecc28cd834687b97

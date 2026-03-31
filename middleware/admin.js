@@ -6,8 +6,4 @@ const adminMiddleware = (req, res, next) => {
   }
 };
 
-<<<<<<< HEAD
 module.exports = adminMiddleware;
-=======
-module.exports = adminMiddleware;
->>>>>>> c99b81f7d7106760fdecb4b8ecc28cd834687b97

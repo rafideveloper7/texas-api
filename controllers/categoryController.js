@@ -82,8 +82,4 @@ exports.deleteCategory = async (req, res) => {
   } catch (error) {
     res.status(500).json({ success: false, message: error.message });
   }
-<<<<<<< HEAD
 };
-=======
-};
->>>>>>> c99b81f7d7106760fdecb4b8ecc28cd834687b97

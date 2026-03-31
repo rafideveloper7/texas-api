@@ -15,8 +15,4 @@ router.put('/:id', authMiddleware, adminMiddleware, upload.single('image'), upda
 router.delete('/:id', authMiddleware, adminMiddleware, deleteMenuItem);
 router.put('/:id/availability', authMiddleware, adminMiddleware, toggleAvailability);
 
-<<<<<<< HEAD
 module.exports = router;
-=======
-module.exports = router;
->>>>>>> c99b81f7d7106760fdecb4b8ecc28cd834687b97

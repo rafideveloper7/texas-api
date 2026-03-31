@@ -1,9 +1,6 @@
 const Order = require('../models/Order');
 const generateOrderNumber = require('../utils/generateOrderNumber');
-<<<<<<< HEAD
 const { sendOrderEmail } = require('../config/email');
-=======
->>>>>>> c99b81f7d7106760fdecb4b8ecc28cd834687b97
 
 exports.createOrder = async (req, res) => {
   try {
@@ -14,13 +11,10 @@ exports.createOrder = async (req, res) => {
     };
 
     const order = await Order.create(orderData);
-<<<<<<< HEAD
     
     // Send email notification
     await sendOrderEmail(order);
     
-=======
->>>>>>> c99b81f7d7106760fdecb4b8ecc28cd834687b97
     res.status(201).json({ success: true, data: order });
   } catch (error) {
     res.status(500).json({ success: false, message: error.message });
@@ -41,10 +35,6 @@ exports.getOrderById = async (req, res) => {
     const order = await Order.findById(req.params.id).populate('items.menuItem');
     if (!order) return res.status(404).json({ success: false, message: 'Order not found' });
     
-<<<<<<< HEAD
-=======
-    // Check ownership or admin
->>>>>>> c99b81f7d7106760fdecb4b8ecc28cd834687b97
     if (req.user.role !== 'admin' && order.user && order.user.toString() !== req.user.id) {
       return res.status(403).json({ success: false, message: 'Not authorized' });
     }
@@ -112,8 +102,4 @@ exports.cancelOrder = async (req, res) => {
   } catch (error) {
     res.status(500).json({ success: false, message: error.message });
   }
-<<<<<<< HEAD
 };
-=======
-};
->>>>>>> c99b81f7d7106760fdecb4b8ecc28cd834687b97

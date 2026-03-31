@@ -2,10 +2,7 @@ const Order = require('../models/Order');
 const MenuItem = require('../models/MenuItem');
 const User = require('../models/User');
 const Reservation = require('../models/Reservation');
-<<<<<<< HEAD
 const Contact = require('../models/Contact');
-=======
->>>>>>> c99b81f7d7106760fdecb4b8ecc28cd834687b97
 
 exports.getStats = async (req, res) => {
   try {
@@ -20,10 +17,7 @@ exports.getStats = async (req, res) => {
     const todayReservations = await Reservation.countDocuments({ 
         date: { $gte: new Date().setHours(0,0,0,0), $lt: new Date().setHours(23,59,59,999) } 
     });
-<<<<<<< HEAD
     const unreadContacts = await Contact.countDocuments({ status: 'unread' });
-=======
->>>>>>> c99b81f7d7106760fdecb4b8ecc28cd834687b97
 
     res.json({
       success: true,
@@ -33,19 +27,11 @@ exports.getStats = async (req, res) => {
         totalUsers,
         totalMenuItems,
         pendingOrders,
-<<<<<<< HEAD
         todayReservations,
         unreadContacts
-=======
-        todayReservations
->>>>>>> c99b81f7d7106760fdecb4b8ecc28cd834687b97
       }
     });
   } catch (error) {
     res.status(500).json({ success: false, message: error.message });
   }
-<<<<<<< HEAD
 };
-=======
-};
->>>>>>> c99b81f7d7106760fdecb4b8ecc28cd834687b97

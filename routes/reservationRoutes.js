@@ -11,8 +11,4 @@ router.get('/admin/all', authMiddleware, adminMiddleware, getAllReservations);
 router.put('/:id', authMiddleware, updateReservation);
 router.delete('/:id', authMiddleware, cancelReservation);
 
-<<<<<<< HEAD
 module.exports = router;
-=======
-module.exports = router;
->>>>>>> c99b81f7d7106760fdecb4b8ecc28cd834687b97

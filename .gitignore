@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 node_modules/
 .env
 .DS_Store
@@ -6,10 +5,3 @@ node_modules/
 dist/
 build/
 .vercel
-=======
-node_modules
-.env
-seeders.js
-test-mongo.js
-test-server.js
->>>>>>> c99b81f7d7106760fdecb4b8ecc28cd834687b97

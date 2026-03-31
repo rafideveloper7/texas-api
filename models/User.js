@@ -17,8 +17,4 @@ const userSchema = new Schema({
   createdAt: { type: Date, default: Date.now }
 });
 
-<<<<<<< HEAD
 module.exports = mongoose.model('User', userSchema);
-=======
-module.exports = mongoose.model('User', userSchema);
->>>>>>> c99b81f7d7106760fdecb4b8ecc28cd834687b97

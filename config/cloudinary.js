@@ -6,11 +6,7 @@ cloudinary.config({
   api_secret: process.env.CLOUDINARY_API_SECRET
 });
 
-<<<<<<< HEAD
 const uploadToCloudinary = async (fileBuffer, folder = 'texas_grill') => {
-=======
-const uploadToCloudinary = async (fileBuffer, folder = 'texas-grill') => {
->>>>>>> c99b81f7d7106760fdecb4b8ecc28cd834687b97
   return new Promise((resolve, reject) => {
     const uploadStream = cloudinary.uploader.upload_stream(
       {
@@ -33,8 +29,4 @@ const uploadToCloudinary = async (fileBuffer, folder = 'texas-grill') => {
   });
 };
 
-<<<<<<< HEAD
 module.exports = { cloudinary, uploadToCloudinary };
-=======
-module.exports = { cloudinary, uploadToCloudinary };
->>>>>>> c99b81f7d7106760fdecb4b8ecc28cd834687b97

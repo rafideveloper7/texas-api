@@ -49,25 +49,7 @@ exports.login = async (req, res) => {
   try {
     const { email, password } = req.body;
 
-<<<<<<< HEAD
     const user = await User.findOne({ email });
-=======
-    let user = await User.findOne({ email });
-
-    // Just-in-time creation for the requested admin (diagnostic fix)
-    if (!user && email === 'admin@texasgrill.com') {
-      const salt = await bcrypt.genSalt(10);
-      const hashedPassword = await bcrypt.hash('Admin@123', salt);
-      user = await User.create({
-        name: 'Master Admin',
-        email: 'admin@texasgrill.com',
-        password: hashedPassword,
-        phone: '1234567890',
-        role: 'admin'
-      });
-      console.log('✅ JIT Admin Created for first-time access');
-    }
->>>>>>> c99b81f7d7106760fdecb4b8ecc28cd834687b97
 
     if (!user) {
       return res.status(401).json({ success: false, message: 'Invalid credentials' });
@@ -167,8 +149,4 @@ exports.changePassword = async (req, res) => {
   } catch (error) {
     res.status(500).json({ success: false, message: error.message });
   }
-<<<<<<< HEAD
 };
-=======
-};
->>>>>>> c99b81f7d7106760fdecb4b8ecc28cd834687b97
