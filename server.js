@@ -69,7 +69,7 @@ app.use('/api/menu', require('./routes/menuRoutes'));
 app.use('/api/orders', require('./routes/orderRoutes'));
 app.use('/api/reservations', require('./routes/reservationRoutes'));
 app.use('/api/contact', require('./routes/contactRoutes'));
-// app.use('/api/slider', require('./routes/sliderRoutes'));
+app.use('/api/slider', require('./routes/sliderRoutes'));
 app.use('/api/dashboard', require('./routes/dashboardRoutes'));
 
 // 404 handler
