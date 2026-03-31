@@ -81,7 +81,8 @@ app.use((req, res) => {
 app.use(errorHandler);
 
 const PORT = process.env.PORT || 5000;
-const PORT_VAL = 5001; 
-app.listen(PORT_VAL, '0.0.0.0', () => {
-  console.log(`Server running in ${process.env.NODE_ENV || 'development'} mode on port ${PORT_VAL}`);
-});
+// const PORT_VAL = 5001; 
+// app.listen(PORT_VAL, '0.0.0.0', () => {
+//   console.log(`Server running in ${process.env.NODE_ENV || 'development'} mode on port ${PORT_VAL}`);
+// });
+module.exports = app;
