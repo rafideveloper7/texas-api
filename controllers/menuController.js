@@ -49,6 +49,10 @@ exports.createMenuItem = async (req, res) => {
 
     const { name, category, price, description, isPopular, customization, nutritionalInfo } = req.body;
     
+<<<<<<< HEAD
+=======
+    // Parse JSON strings from form-data if needed
+>>>>>>> c99b81f7d7106760fdecb4b8ecc28cd834687b97
     const parsedCustomization = typeof customization === 'string' ? JSON.parse(customization) : customization;
     const parsedNutritionalInfo = typeof nutritionalInfo === 'string' ? JSON.parse(nutritionalInfo) : nutritionalInfo;
 
@@ -121,4 +125,8 @@ exports.toggleAvailability = async (req, res) => {
   } catch (error) {
     res.status(500).json({ success: false, message: error.message });
   }
+<<<<<<< HEAD
 };
+=======
+};
+>>>>>>> c99b81f7d7106760fdecb4b8ecc28cd834687b97

@@ -1,13 +1,19 @@
 const Contact = require('../models/Contact');
+<<<<<<< HEAD
 const { sendContactEmail } = require('../config/email');
+=======
+>>>>>>> c99b81f7d7106760fdecb4b8ecc28cd834687b97
 
 exports.submitContact = async (req, res) => {
   try {
     const contact = await Contact.create(req.body);
+<<<<<<< HEAD
     
     // Send email notification
     await sendContactEmail(contact);
     
+=======
+>>>>>>> c99b81f7d7106760fdecb4b8ecc28cd834687b97
     res.status(201).json({ success: true, message: 'Message sent successfully' });
   } catch (error) {
     res.status(500).json({ success: false, message: error.message });
@@ -44,4 +50,8 @@ exports.deleteContact = async (req, res) => {
   } catch (error) {
     res.status(500).json({ success: false, message: error.message });
   }
+<<<<<<< HEAD
 };
+=======
+};
+>>>>>>> c99b81f7d7106760fdecb4b8ecc28cd834687b97

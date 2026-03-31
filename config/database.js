@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const mongoose = require('mongoose');
 
 const connectDB = async () => {
@@ -57,3 +58,45 @@ const seedAdmin = async () => {
 };
 
 module.exports = connectDB;
+=======
+// const mongoose = require('mongoose');
+
+// const connectDB = async () => {
+//   try {
+//     const conn = await mongoose.connect(process.env.MONGODB_URI);
+//     console.log(`MongoDB Connected: ${conn.connection.host}`);
+//   } catch (error) {
+//     console.error(`Error: ${error.message}`);
+//     // process.exit(1);
+//   }
+// };
+
+// module.exports = connectDB;
+
+
+const mongoose = require('mongoose');
+
+let isConnected = false;
+
+module.exports = async function connectDB() {
+  if (isConnected) {
+    console.log('Using existing database connection');
+    return;
+  }
+  
+  try {
+    const conn = await mongoose.connect(process.env.MONGODB_URI, {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+      serverSelectionTimeoutMS: 5000, // Timeout after 5 seconds
+    });
+    
+    isConnected = conn.connections[0].readyState === 1;
+    console.log('MongoDB Connected Successfully');
+    return conn;
+  } catch (error) {
+    console.error('MongoDB Connection Error:', error.message);
+    throw error;
+  }
+};
+>>>>>>> c99b81f7d7106760fdecb4b8ecc28cd834687b97

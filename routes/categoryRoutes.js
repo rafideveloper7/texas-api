@@ -11,4 +11,8 @@ router.post('/', authMiddleware, adminMiddleware, upload.single('image'), create
 router.put('/:id', authMiddleware, adminMiddleware, upload.single('image'), updateCategory);
 router.delete('/:id', authMiddleware, adminMiddleware, deleteCategory);
 
+<<<<<<< HEAD
 module.exports = router;
+=======
+module.exports = router;
+>>>>>>> c99b81f7d7106760fdecb4b8ecc28cd834687b97

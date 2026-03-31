@@ -10,4 +10,8 @@ const contactSchema = new Schema({
   status: { type: String, enum: ['unread', 'read', 'replied'], default: 'unread' }
 }, { timestamps: true });
 
+<<<<<<< HEAD
 module.exports = mongoose.model('Contact', contactSchema);
+=======
+module.exports = mongoose.model('Contact', contactSchema);
+>>>>>>> c99b81f7d7106760fdecb4b8ecc28cd834687b97

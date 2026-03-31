@@ -13,4 +13,8 @@ const categorySchema = new Schema({
   order: { type: Number, default: 0 }
 }, { timestamps: true });
 
+<<<<<<< HEAD
 module.exports = mongoose.model('Category', categorySchema);
+=======
+module.exports = mongoose.model('Category', categorySchema);
+>>>>>>> c99b81f7d7106760fdecb4b8ecc28cd834687b97

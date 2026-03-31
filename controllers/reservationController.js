@@ -1,13 +1,19 @@
 const Reservation = require('../models/Reservation');
+<<<<<<< HEAD
 const { sendReservationEmail } = require('../config/email');
+=======
+>>>>>>> c99b81f7d7106760fdecb4b8ecc28cd834687b97
 
 exports.createReservation = async (req, res) => {
   try {
     const reservation = await Reservation.create(req.body);
+<<<<<<< HEAD
     
     // Send email notification
     await sendReservationEmail(reservation);
     
+=======
+>>>>>>> c99b81f7d7106760fdecb4b8ecc28cd834687b97
     res.status(201).json({ success: true, data: reservation });
   } catch (error) {
     res.status(500).json({ success: false, message: error.message });
@@ -64,10 +70,18 @@ exports.checkAvailability = async (req, res) => {
     const { date, time } = req.query;
     const reservations = await Reservation.find({ date, time, status: 'confirmed' });
     
+<<<<<<< HEAD
+=======
+    // Logic for availability check (example: max 10 tables)
+>>>>>>> c99b81f7d7106760fdecb4b8ecc28cd834687b97
     const available = reservations.length < 10;
     
     res.json({ success: true, available });
   } catch (error) {
     res.status(500).json({ success: false, message: error.message });
   }
+<<<<<<< HEAD
 };
+=======
+};
+>>>>>>> c99b81f7d7106760fdecb4b8ecc28cd834687b97

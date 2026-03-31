@@ -5,6 +5,10 @@ const authMiddleware = require('../middleware/auth');
 const adminMiddleware = require('../middleware/admin');
 
 router.post('/', (req, res, next) => {
+<<<<<<< HEAD
+=======
+  // Optional auth for order creation
+>>>>>>> c99b81f7d7106760fdecb4b8ecc28cd834687b97
   if (req.headers.authorization) return authMiddleware(req, res, next);
   next();
 }, createOrder);
@@ -16,4 +20,8 @@ router.put('/:id/status', authMiddleware, adminMiddleware, updateOrderStatus);
 router.put('/:id/payment', authMiddleware, adminMiddleware, updatePaymentStatus);
 router.delete('/:id', authMiddleware, cancelOrder);
 
+<<<<<<< HEAD
 module.exports = router;
+=======
+module.exports = router;
+>>>>>>> c99b81f7d7106760fdecb4b8ecc28cd834687b97

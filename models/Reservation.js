@@ -17,4 +17,8 @@ const reservationSchema = new Schema({
   status: { type: String, enum: ['pending', 'confirmed', 'cancelled', 'completed'], default: 'pending' }
 }, { timestamps: true });
 
+<<<<<<< HEAD
 module.exports = mongoose.model('Reservation', reservationSchema);
+=======
+module.exports = mongoose.model('Reservation', reservationSchema);
+>>>>>>> c99b81f7d7106760fdecb4b8ecc28cd834687b97
