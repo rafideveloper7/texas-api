@@ -18,7 +18,7 @@ const app = express();
 // Middleware
 app.use(helmet());
 app.use(cors({
-  origin: https://texasadmin.vercel.app/,
+  origin: 'https://texasadmin.vercel.app/',
   credentials: true
 }));
 app.use(compression());
